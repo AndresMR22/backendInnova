@@ -29,7 +29,7 @@ import com.comercial.acat.service.ContactoService;
 
 @RestController
 @RequestMapping("/contacto")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ContactoController {
 	@Autowired
 	ContactoService contactoService;

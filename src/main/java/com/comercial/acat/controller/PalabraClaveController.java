@@ -29,7 +29,7 @@ import com.comercial.acat.service.PalabraClaveService;
 
 @RestController
 @RequestMapping("/palabraclave")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class PalabraClaveController {
 
 

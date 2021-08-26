@@ -27,7 +27,7 @@ import com.comercial.acat.service.ProyectoService;
 
 @RestController
 @RequestMapping(path = "/proyecto")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ProyectoController {
 	
 	@Autowired

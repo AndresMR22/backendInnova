@@ -23,7 +23,7 @@ import com.comercial.acat.service.GaleriaService;
 
 @RestController
 @RequestMapping(path = "/galeria")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class GaleriaController {
 	
 	@Autowired

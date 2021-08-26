@@ -29,7 +29,7 @@ import com.comercial.acat.service.ObjetivoEspecificoService;
 
 @RestController
 @RequestMapping(path = "/objetivoespecifico")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ObjetivoEspecificoController {
 
 	@Autowired

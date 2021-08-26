@@ -26,7 +26,7 @@ import com.comercial.acat.service.ReporteService;
 
 @RestController
 @RequestMapping("/reporte")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ReporteController {
 	
 	@Autowired

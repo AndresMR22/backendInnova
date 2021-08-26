@@ -24,7 +24,7 @@ import com.comercial.acat.entity.Producto;
 import com.comercial.acat.service.EnlaceService;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RequestMapping("/enlace")
 public class EnlaceController {
 	

@@ -30,7 +30,7 @@ import com.comercial.acat.service.PublicacionService;
 
 @RestController
 @RequestMapping("/publicacion")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class PublicacionController {
 
 	@Autowired

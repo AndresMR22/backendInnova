@@ -24,7 +24,7 @@ import com.comercial.acat.service.InformacionService;
 
 @RestController
 @RequestMapping(path = "/informacion")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class InformacionController {
 
 	@Autowired

@@ -23,7 +23,7 @@ import com.comercial.acat.service.InvestigadorService;
 
 @RestController
 @RequestMapping("/investigador")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class InvestigadorController {
 
 	@Autowired

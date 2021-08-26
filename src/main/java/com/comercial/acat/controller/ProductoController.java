@@ -26,7 +26,7 @@ import com.comercial.acat.service.ProductoService;
 
 @RestController
 @RequestMapping("/producto")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ProductoController {
 	
 @Autowired

@@ -23,7 +23,7 @@ import com.comercial.acat.service.CarruselService;
 
 @RestController
 @RequestMapping(path = "/carrusel")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class CarruselController {
 	@Autowired
 	CarruselService cs;
