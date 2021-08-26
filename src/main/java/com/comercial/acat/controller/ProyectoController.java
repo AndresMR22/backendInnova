@@ -5,9 +5,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,9 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.comercial.acat.dto.Mensaje;
-import com.comercial.acat.dto.ProyectoDto;
+import com.comercial.acat.entity.Mensaje;
 import com.comercial.acat.entity.Proyecto;
 import com.comercial.acat.service.ProyectoService;
 
@@ -38,14 +34,6 @@ public class ProyectoController {
 		List<Proyecto> list = proService.findAll();
 		return new ResponseEntity<List<Proyecto>>(list, HttpStatus.OK);
 	}
-	
-	/*@GetMapping ("/detailtitulo/{tituloproyecto}")
-	public ResponseEntity<Proyecto> getByTitulo (@PathVariable("tituloproyecto") String tituloproyecto){
-		if (!proService.existsByTitulo(tituloproyecto))
-			return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-		Proyecto proyecto = proService.getOne(tituloproyecto).get();
-		return new ResponseEntity<Proyecto>(proyecto, HttpStatus.OK);
-	}*/
 	
 	
 	

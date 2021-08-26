@@ -2,7 +2,6 @@ package com.comercial.acat.entity;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -12,28 +11,12 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-
-
-//@Data
-//@NoArgsConstructor
-//@RequiredArgsConstructor
-//@JsonIgnoreProperties(ignoreUnknown = true)
 
 @Entity
 @Table(name="proyecto")
@@ -48,18 +31,15 @@ public class Proyecto {
 	String objetivogeneral;
 	@Lob @Basic (fetch = FetchType.LAZY) @Column (columnDefinition = "TEXT")
 	String resumen;
+	@Lob @Basic (fetch = FetchType.LAZY) @Column (columnDefinition = "TEXT")
+	String palabrasclave;
 	String autor;
-	@NotBlank
 	@Column(name="fecha")
 	private LocalDate fecha;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto",  fetch = FetchType.EAGER)
 	@JsonManagedReference
     private List<ObjetivoEspecifico> objetivosespecificos;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto")
-	@JsonManagedReference
-    private List<PalabraClave> palabrasclave;
 	
 	public Proyecto(int id ) {
 		super();
@@ -69,13 +49,14 @@ public class Proyecto {
 		super();
 	}
 	
-	public Proyecto(String titulo, String objetivogeneral, String resumen, String autor, @NotBlank LocalDate fecha) {
+	public Proyecto(String titulo, String objetivogeneral, String resumen, String autor, @NotBlank LocalDate fecha, String palabrasclave) {
 		super();
 		this.titulo = titulo;
 		this.objetivogeneral = objetivogeneral;
 		this.resumen = resumen;
 		this.autor = autor;
 		this.fecha = fecha;
+		this.palabrasclave = palabrasclave;
 	}
 
 	public int getIdproyecto() {
@@ -133,14 +114,22 @@ public class Proyecto {
 	public void setObjetivosespecificos(List<ObjetivoEspecifico> objetivosespecificos) {
 		this.objetivosespecificos = objetivosespecificos;
 	}
-
-	public List<PalabraClave> getPalabrasclave() {
+	public String getPalabrasclave() {
 		return palabrasclave;
 	}
-
-	public void setPalabrasclave(List<PalabraClave> palabrasclave) {
+	public void setPalabrasclave(String palabrasclave) {
 		this.palabrasclave = palabrasclave;
 	}
+	
+	
+
+//	public List<PalabraClave> getPalabrasclave() {
+//		return palabrasclave;
+//	}
+//
+//	public void setPalabrasclave(List<PalabraClave> palabrasclave) {
+//		this.palabrasclave = palabrasclave;
+//	}
 
 	
 	

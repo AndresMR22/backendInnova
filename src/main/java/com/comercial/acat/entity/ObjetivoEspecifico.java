@@ -43,7 +43,7 @@ public class ObjetivoEspecifico {
 	 @ManyToOne(fetch = FetchType.EAGER)
 	    @JoinColumn(name = "proyecto", nullable = true, updatable = true)
 	 @JsonBackReference
-	    private @NonNull Proyecto proyecto;
+	    private Proyecto proyecto;
 	 
 	public ObjetivoEspecifico(){
 		super();

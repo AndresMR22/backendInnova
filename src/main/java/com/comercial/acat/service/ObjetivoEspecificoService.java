@@ -11,6 +11,7 @@ import com.comercial.acat.entity.*;
 import com.comercial.acat.repository.*;
 
 @Service
+@Transactional
 public class ObjetivoEspecificoService {
 
 	@Autowired

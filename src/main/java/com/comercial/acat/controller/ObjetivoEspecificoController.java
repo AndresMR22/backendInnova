@@ -19,10 +19,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.comercial.acat.dto.Mensaje;
-import com.comercial.acat.dto.ObjetivoEspecificoDto;
+import com.comercial.acat.entity.Mensaje;
 import com.comercial.acat.entity.ObjetivoEspecifico;
-import com.comercial.acat.entity.Proyecto;
 import com.comercial.acat.service.ObjetivoEspecificoService;
 
 

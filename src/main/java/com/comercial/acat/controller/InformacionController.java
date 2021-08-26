@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.comercial.acat.dto.Mensaje;
 import com.comercial.acat.entity.Galeria;
 import com.comercial.acat.entity.Informacion;
+import com.comercial.acat.entity.Mensaje;
 import com.comercial.acat.service.InformacionService;
 
 @RestController

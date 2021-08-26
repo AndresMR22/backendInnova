@@ -1,4 +1,4 @@
-package com.comercial.acat.dto;
+package com.comercial.acat.entity;
 
 public class Mensaje {
 

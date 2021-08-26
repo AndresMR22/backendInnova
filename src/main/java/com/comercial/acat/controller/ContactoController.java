@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.comercial.acat.dto.Mensaje;
 import com.comercial.acat.entity.Contacto;
 import com.comercial.acat.entity.Investigador;
+import com.comercial.acat.entity.Mensaje;
 import com.comercial.acat.service.ContactoService;
 
 @RestController
