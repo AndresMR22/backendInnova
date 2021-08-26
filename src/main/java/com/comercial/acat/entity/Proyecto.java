@@ -29,14 +29,14 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
+
+//@Data
+//@NoArgsConstructor
+//@RequiredArgsConstructor
+//@JsonIgnoreProperties(ignoreUnknown = true)
+
 @Entity
 @Table(name="proyecto")
-@Data
-@NoArgsConstructor
-@RequiredArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-
-
 public class Proyecto {
 	
 	@Id
@@ -60,8 +60,6 @@ public class Proyecto {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto")
 	@JsonManagedReference
     private List<PalabraClave> palabrasclave;
-	
-	
 	
 	public Proyecto(int id ) {
 		super();

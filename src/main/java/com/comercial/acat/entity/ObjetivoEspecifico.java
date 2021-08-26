@@ -24,13 +24,14 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
+
+//@Data
+//@ToString(exclude = "proyecto")
+//@EqualsAndHashCode(exclude = "proyecto")
+//@RequiredArgsConstructor
+//@NoArgsConstructor
+//@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-@Data
-@ToString(exclude = "proyecto")
-@EqualsAndHashCode(exclude = "proyecto")
-@RequiredArgsConstructor
-@NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class ObjetivoEspecifico {
 	
 	@Id

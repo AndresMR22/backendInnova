@@ -29,11 +29,11 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
-@Data
-@NoArgsConstructor
-@RequiredArgsConstructor
-@AllArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@Data
+//@NoArgsConstructor
+//@RequiredArgsConstructor
+//@AllArgsConstructor
+//@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @Table(name="producto")
 public class Producto{
